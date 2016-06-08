@@ -142,8 +142,6 @@ $ gg
 
 ## Inspecionando o histórico do repositório
 
-* normal
-
 ```sh
 # normal
 $ git log
@@ -151,3 +149,7 @@ $ git log
 # atalho: formato muito mais condensado e completo, com cores que diferenciam diferentes categorias de informação, mostra as referências, etc...
 $ gl
 ```
+
+* perceba a diferença entre o `git log` normal e o atalho `gl`
+
+![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/diff-gl-gitlog.png)
