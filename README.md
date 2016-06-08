@@ -107,6 +107,27 @@ $ git add --all :/
 $ gal
 ```
 
+## Revertendo modificações já adicionadas ao INDEX
+
+* suponha que você escreveu fez uma alteração a um arquivo `git add arquivo.txt` e assim adicionou essa modificação `INDEX`
+* se você quer desfazer essa operação, basta escrever:
+
+```sh
+git reset arquivo.txt
+```
+
+* dessa forma as modificações no arquivo.txt continuarão a ficar como modificações apenas na working copy.
+
+## Revertendo modificações na working copy
+
+* suponha que você tenha um `arquivo.txt` no HEAD.
+* suponha ainda que você abriu esse arquivo e adicionou umas 7 linhas. Mas quer reverter isso. Quer deixar o arquivo como ele estava.
+* um `git status` vai revelar que o arquivo `arquivo.txt` contém modificações locais. Para reverter essas modificações nesse arquivo, basta escrever:
+
+```sh
+$ git checkout `arquivo.txt`
+```
+
 ## Adicionando um commit ao seu projeto
 
 ```sh
@@ -180,7 +201,7 @@ $ dit diff --cached
 
 ![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/git-diff.png)
 
-* você pode compara duas refs quaisquer com git diff. por exemplo
+* você pode comparar duas refs quaisquer com git diff. por exemplo
 
 ```sh
 # o que mudou de 2 commits para trás até agora?
