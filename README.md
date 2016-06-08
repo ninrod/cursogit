@@ -292,3 +292,7 @@ $ git reset --hard <commit SHA>
 # faz o HEAD (e o branch que é apontando pelo HEAD) apontar para o commit imediatamente anterior
 $ git reset --hard HEAD~
 ```
+
+# Referências
+
+Você encontra mais dicas de git no meu [repo do github](https://github.com/ninrod/tricks/blob/master/shell/git.md).
