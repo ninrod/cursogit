@@ -35,6 +35,9 @@
 * Um `branch` nada mais é do que uma referência. Logo é apenas um ponteiro para um commit. Por isso que se diz que no git os branches são __'leves'__.
 * Um `branch` pode apontar para diferentes commits, de acordo com o vontade do usuário.
 * O git commit faz com que o commit atual, apontado pelo branch atual, ganhe um filho, e faz o branch atual apontar para esse filho.
+* quando você inicia um repo git, o git cria um branch com o nome padrão de `master`. 
+* O `master` é só isso, um nome padrão para o primeiro branch criado. Poderia ser outro nome. Você pode mudar o nome para o nome que você quiser.
+
 
 ## O `HEAD`
 
@@ -65,7 +68,7 @@ $ cat arquivo.txt
 ```sh
 # onde :arquivo.txt é o full path para o arquivo no seu repo.
 # poderia ser config/arquivo.txt ou outra coisa
-$ git show :arquivo.txt, 
+$ git show :arquivo.txt
 ```
 
 * No `HEAD`: que é como o arquivo está no commit `checkoutizado` nesse momento no seu repo.
@@ -78,9 +81,17 @@ $ git show :arquivo.txt,
 $ git show HEAD:arquivo.txt
 ```
 
+## os remotes
+
+* é remotes, no plural mesmo, porque você pode adicionar infinitos remotes no seu git repo local
+* Quando você git clona um repo, o git, por padrão, adiciona um remote chamado `origin` que aponta para o repo git clonado.
+* o `origin` abriga upstream branches, ou seja, os branches que estão na máquina remota que abriga o repo git que é `a verdade`. (tem upstream tags também)
+* você tem na verdade uma cópia desses branches remotos no seu origin local. Cabe a você ir `syncando` ou atualizando essa cópia.
+* fora essas características, para efeitos práticos, o `origin` abriga apenas referências para commits: `origin/HEAD`, `origin/master`, `origin/feature-1`, `origin/v2.1`, etc...
+
 # Comandos git
 
-## Trabalhando com o INDEX
+## Adicionando modificações ao INDEX
 
 * você pode pensar que o index é o seu __commit proposto__.
 * você tem que adicionar os arquivos modificados localmente ao INDEX. antes de commitar.
@@ -107,7 +118,7 @@ $ git commit -m 'sua mensagem de commit'
 $ gc 
 ```
 
-## verificando o status do seu repositório
+## Verificando o status do seu repositório
 
 * verificando suas modificações locais
 
@@ -119,7 +130,7 @@ $ git status
 $ g
 ```
 
-* verificando em qual branch você está no momento, e quantos commits está para trás ou para frente em relação ao seu tracking branch
+* verificando em qual branch você está no momento, e quantos commits está para trás ou para frente em relação ao seu tracking branch (ou `upstream` branch)
 
 ```sh
 # normal: mostra apenas em qual branch você está
