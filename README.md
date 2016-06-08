@@ -175,3 +175,8 @@ $ git diff
 ```sh
 $ dit diff --cached
 ```
+
+* veja como fica o diff no terminal:
+
+![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/git-diff.png)
+
