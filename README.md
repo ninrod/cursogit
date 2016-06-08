@@ -24,37 +24,43 @@
 * São referências no git: o `HEAD`, qualquer `branch`, e qualquer `tag`.
 
 
-## tags
+## A `tag`
 
 * Uma `tag` é uma referência. Logo, é apenas um ponteiro para um commit.
 * Uma tag, uma vez criada, nunca poderá ser alterada. 
 * Em outras palavras, aponta sempre para o mesmo commit e nunca muda, desde sua criação.
 
-## branches e tags
+## O `branch`
 
 * Um `branch` nada mais é do que uma referência. Logo é apenas um ponteiro para um commit. Por isso que se diz que no git os branches são __'leves'__.
 * Um `branch` pode apontar para diferentes commits, de acordo com o vontade do usuário.
 * O git commit faz com que o commit atual, apontado pelo branch atual, ganhe um filho, e faz o branch atual apontar para esse filho.
 
-## o HEAD
+## O `HEAD`
 
-* Assim como `branches` e `tags`, o `HEAD` é apenas uma referência para um commit, mas com caraterísticas especiais.
-* O HEAD é uma referência que pode apontar para outra referência: os `branches`
-* O `HEAD` pode apontar para um commit diretamente, ou no caso normal, aponta para um `branch`
-* Como o `git commit` altera para onde um branch aponta, se o HEAD estiver apontando para um branch e o branch mudar, o HEAD também mudará para refletir essa alteração.
+* Assim como `branches` e `tags`, o `HEAD` é apenas uma referência para um commit. Mas não qualquer commit.
+  * Veja que em qualquer momento da linha do tempo, no seu repo git, você tem um commit `checkoutizado`.
+  * esse commit `checkoutizado` é apontado sempre pela referência `HEAD`.
+* Além disso, o HEAD é uma referência que pode apontar para outra referência: um `branch`.
+* Então o `HEAD` pode apontar para um commit diretamente, ou no caso normal, aponta para um `branch`
+* Quando o `HEAD` aponta para um branch, por exemplo, `master`, ele __acompanha__ o `master`.
+  * para ficar claro: suponha que o `master` estava apontando para `A` e agora aponta para `B`. 
+  * então o HEAD também estava apontando para `A` e agora está apontando para `B`, via `master`.
 
-## No no seu repo git, o arquivo pode estar em 3 locais diferentes
+## As __três árvores__ do git
 
-* O arquivo pode estar:
-  * Na `WORKING COPY`: que é o seu sistema de arquivos do seu SO. 
-    * Você pode ver como o arquivo nesse local por meio de, por ex: 
+* No no seu repo git, o arquivo pode estar em 3 locais diferentes:
+
+* O arquivo pode estar na `WORKING COPY`: que é o seu sistema de arquivos.
+* Você pode ver como o arquivo nesse local por meio de, por ex: 
 
 ```sh
 $ cat arquivo.txt
 ```
 
-  * No `INDEX` (tbm chamado de `staging area`, `stage`, ou `cache`): que é o seu `commit proposto`. é um commit, mas o git não aplicou um `SHA` a ele ainda. 
-    * Você pode ver como o arquivo se encontra nessa área por meio do comando: 
+* Pode estar no `INDEX` (tbm chamado de `staging area`, `stage`, ou `cache`): que é o seu `commit proposto`. 
+* é efetivamente um commit, mas o git não aplicou um `SHA` a ele ainda. então não tem referência, nem pai, nem identificador.
+* Você pode ver como o arquivo se encontra nessa área especial por meio do comando: 
 
 ```sh
 # onde :arquivo.txt é o full path para o arquivo no seu repo.
@@ -62,12 +68,13 @@ $ cat arquivo.txt
 $ git show :arquivo.txt, 
 ```
 
-
-  * No `HEAD`: que é como o arquivo está no commit `checkoutizado` agora no seu repo. 
-    * Você enxerga o arquivo tal como ele está no HEAD por meio do comando:
+* No `HEAD`: que é como o arquivo está no commit `checkoutizado` nesse momento no seu repo.
+* Então quando se diz: quero ver como o arquivo está no `HEAD`, é a mesma coisa que dizer: __quero ver como o arquivo está no commit checkoutizado no momento no meu repo__
+* Você enxerga o arquivo tal como ele está no `HEAD` por meio do comando:
 
 ```sh
 # mesma sintaxe do INDEX, acima
+# perceba que no lugar do HEAD você poderia colocar qualquer referência: um branch, uma tag, um commit SHA, etc...
 $ git show HEAD:arquivo.txt
 ```
 
