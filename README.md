@@ -1,4 +1,4 @@
-# GIT: comandos aprendidos
+# Curso de GIT do Filipe (deinf.filipe)
 
 * onde eu apresento de forma escrita os comandos demonstrados no curso de git para fins de estudo pós-curso.
 * ao mostrar os comandos, eu vou apresentar a forma padrão e logo embaixo eu vou escrever a forma utilizando os alias do shell unix customizado.
@@ -159,4 +159,19 @@ $ gl
 ```sh
 # mesma coisa que gl --reflog
 $ glr
+```
+
+## git diff: o que exatamente mudou? 
+
+* você pode verificar o que mudou da sua working copy para o seu INDEX com o comando git diff
+
+```sh
+# ou simplesmente $ gd
+$ git diff 
+```
+
+* para que você verifique o que mudou do INDEX para o HEAD, escreva:
+
+```sh
+$ dit diff --cached
 ```
