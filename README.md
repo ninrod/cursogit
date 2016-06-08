@@ -81,7 +81,7 @@ $ git show :arquivo.txt
 $ git show HEAD:arquivo.txt
 ```
 
-## os remotes
+## Os remotes
 
 * é remotes, no plural mesmo, porque você pode adicionar infinitos remotes no seu git repo local
 * Quando você git clona um repo, o git, por padrão, adiciona um remote chamado `origin` que aponta para o repo git clonado.
@@ -138,4 +138,16 @@ $ git branch
 
 # alias: mostra todos os branches locais, os tracking branches, e para quais commits cada respectivo branch está apontando
 $ gg
+```
+
+## Inspecionando o histórico do repositório
+
+* normal
+
+```sh
+# normal
+$ git log
+
+# atalho: formato muito mais condensado e completo, com cores que diferenciam diferentes categorias de informação, mostra as referências, etc...
+$ gl
 ```
