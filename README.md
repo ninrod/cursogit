@@ -180,3 +180,9 @@ $ dit diff --cached
 
 ![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/git-diff.png)
 
+* você pode compara duas refs quaisquer com git diff. por exemplo
+
+```sh
+# o que mudou de 2 commits para trás até agora?
+$ git diff HEAD~2 HEAD
+```
