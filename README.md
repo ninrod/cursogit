@@ -49,7 +49,7 @@
 
 ## As __três árvores__ do git
 
-* No no seu repo git, o arquivo pode estar em 3 locais diferentes:
+* No seu repo git, o arquivo pode estar em 3 locais diferentes:
 
 * O arquivo pode estar na `WORKING COPY`: que é o seu sistema de arquivos.
 * Você pode ver como o arquivo nesse local por meio de, por ex: 
