@@ -1,7 +1,7 @@
 # GIT: comandos aprendidos
 
 * onde eu apresento de forma escrita os comandos demonstrados no curso de git para fins de estudo pós-curso.
-* ao mostrar os comandos, eu vou apresentar a forma padrão e logo embaixo eu vou escrever a forma utilizando os alias do shell unix customizado que virá por padrão na instalação do arestools.
+* ao mostrar os comandos, eu vou apresentar a forma padrão e logo embaixo eu vou escrever a forma utilizando os alias do shell unix customizado.
 
 # Ideias gerais do git
 
