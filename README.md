@@ -153,3 +153,10 @@ $ gl
 * perceba a diferença entre o `git log` normal e o atalho `gl`
 
 ![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/diff-gl-gitlog.png)
+
+* Bonus: você pode inspecionar o repositório considerando o `reflog`, em que o git considera as referências não alcançáveis como alcançáveis:
+
+```sh
+# mesma coisa que gl --reflog
+$ glr
+```
