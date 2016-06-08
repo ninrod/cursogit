@@ -282,12 +282,13 @@ $ git branch -m <novonomedobranch>
 * basta escrever:
 
 ```sh
+# no lugar de <commit SHA> você pode colocar qualquer ref: branch, tag, etc...
 $ git reset --hard <commit SHA>
 ```
 
 * você pode usar referências relativas:
 
 ```sh
-# joga fora o último commit (localmente)
+# faz o HEAD (e o branch que é apontando pelo HEAD) apontar para o commit imediatamente anterior
 $ git reset --hard HEAD~
 ```
