@@ -207,3 +207,65 @@ $ dit diff --cached
 # o que mudou de 2 commits para trás até agora?
 $ git diff HEAD~2 HEAD
 ```
+
+## git merge: amarrando branches com um novo commit
+
+* você pode amarrar branches de desenvolvimento que bifurcaram no grafo com um novo commit. Basta escrever:
+
+```sh
+# suponha que você esteja em master e suponha que feature seja um branch que divergiu de master.
+git merge feature
+
+# pronto. você acabou de incorporar as modificações contidas em feature para dentro do branch master.
+```
+
+## git rebase: um histórico de commits mais limpo
+
+* você também pode optar por deixar seu histórico de commits mais limpo com `git rebase`.
+* com `git rebase` você pede para que o git faça um `replay` de todos os commits a partir do ancestral comum entre o seu branch atual e o branch para o qual vc quer fazer rebase.
+* com isso você terá um histórico com uma __linha mais reta__.
+
+* como um exemplo, suponha que você esteja em um branch `feature`.
+* suponha que você queira incorporar as alterações em `feature` para `master`.
+* suponha também que `feature` e `master` divergiram de forma que um `git merge` criaria um novo commit amarrando os dois branches (não seria um `fast-forward`).
+* para incorporar as alterações em feature para dentro de master de forma que a linha de histórico de commits continue reta, basta escrever:
+
+```sh
+$ git rebase master
+
+# fast forward. poderia utilizar git merge feature também. o efeito é o mesmo.
+$ git checkout master
+$ git rebase feature
+```
+
+## trabalhando com remotes e branches
+
+* suponha que você tenha um repositório clonado, e com o branch `master` em checkout.
+* para criar um novo branch e fazer o checkout desse novo branch, digite
+
+```sh
+$ git branch feature
+$ git checkout feature
+```
+
+* suponha que você fez algumas alterações, add, commit e queira fazer o push do branch feature para o origin
+* suponha que você queira ainda setar o `origin/feature` para ser o tracking branch do `feature`
+
+```sh
+# o -u manda o git setar o origin/feature que será criado nesse comando para ser o tracking branch de feature
+$ git push -u origin feature
+```
+
+* lembre-se que um tracking branch (ou upstream branch) é um branch de comparação. O git status vai te dizer quantos commits para trás ou para frente você está em relação sempre a um tracking branch.
+
+* você pode remover um branch local
+
+```sh
+$ git branch -d feature
+```
+
+* para renomear o branch atual em que você está:
+
+```sh
+$ git branch -m <novonomedobranch>
+```
