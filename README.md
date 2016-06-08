@@ -238,6 +238,12 @@ $ git checkout master
 $ git rebase feature
 ```
 
+* __IMPORTANTE__: git rebase é uma forma de reescrever a história de um repo. 
+* então você só pode reescrever a história de um repo em um branch local seu, ou em um branch remote a que somente você tenha acesso (ou você combinou com todos no projeto que só faria push nesse branch.)
+* se você já fez git push dos commits cuja história vc está reescrevendo, você terá que mandar um `git push -f` (`f` de force). Ou seja, os commits reescritos serão apagados do remote. (porque não haverá referências apontando para eles. eles se tornarão inalcançáveis).
+* logo, se alguém baseou um commit em um outro commit que você estará apagando do remote, esse algúem ficará muito desapontado com você.
+* então use o git rebase com __cautela__.
+
 ## trabalhando com remotes e branches
 
 * suponha que você tenha um repositório clonado, e com o branch `master` em checkout.
@@ -268,4 +274,20 @@ $ git branch -d feature
 
 ```sh
 $ git branch -m <novonomedobranch>
+```
+
+## alterando referências: faça um branch apontar para onde você quiser
+
+* suponha que você queira que o `master` aponte para um commit SHA arbitrário.
+* basta escrever:
+
+```sh
+$ git reset --hard <commit SHA>
+```
+
+* você pode usar referências relativas:
+
+```sh
+# joga fora o último commit (localmente)
+$ git reset --hard HEAD~
 ```
