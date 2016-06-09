@@ -1,13 +1,12 @@
-# Curso de GIT do Ninrod (Filipe Silva)
+# Ninrod's Git Crash Course
 
 * onde eu apresento de forma escrita os comandos demonstrados no curso de git para fins de estudo pós-curso.
-* ao mostrar os comandos, eu vou apresentar a forma padrão e logo embaixo eu vou escrever a forma utilizando os alias do shell unix customizado.
 
 # Ideias gerais do git
 
 ## Todo repo git é um DAG (direct acyclic graph)
 
-* Um commit é uma série de modificações introduzidas a um repositório. Você pode pensar que um commit é um `patch`.
+* Um commit é uma série de modificações introduzidas a um repositório.
 * Um repositório git nada mais é do que um grafo direcionado acíclico em que os vértices são os commits.
 * Um commit pode ter infinitos pais.
 * Geralmente um commit tem um commit pai. O commit sempre aponta para o seu pai, se tiver pai.
@@ -50,7 +49,7 @@
   * para ficar claro: suponha que o `master` estava apontando para `A` e agora aponta para `B`. 
   * então o HEAD também estava apontando para `A` e agora está apontando para `B`, via `master`.
 
-## As __três árvores__ do git
+## As 'três árvores' do git
 
 * No seu repo git, o arquivo pode estar em 3 locais diferentes:
 
