@@ -1,4 +1,4 @@
-# Curso de GIT do Filipe (deinf.filipe)
+# Curso de GIT do Ninrod (Filipe Silva)
 
 * onde eu apresento de forma escrita os comandos demonstrados no curso de git para fins de estudo pós-curso.
 * ao mostrar os comandos, eu vou apresentar a forma padrão e logo embaixo eu vou escrever a forma utilizando os alias do shell unix customizado.
@@ -173,7 +173,7 @@ $ gl
 
 * perceba a diferença entre o `git log` normal e o atalho `gl`
 
-![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/diff-gl-gitlog.png)
+![screenshot-git-log](https://raw.githubusercontent.com/ninrod/cursogit/misc/img/diff-gl-gitlog.png)
 
 * Bonus: você pode inspecionar o repositório considerando o `reflog`, em que o git considera as referências não alcançáveis como alcançáveis:
 
@@ -199,7 +199,7 @@ $ dit diff --cached
 
 * veja como fica o diff no terminal:
 
-![screenshot-vi-tmux](http://git/DEINF.FILIPE/cursogit/raw/misc/img/git-diff.png)
+![screenshot-vi-tmux](https://github.com/ninrod/cursogit/raw/misc/img/git-diff.png)
 
 * você pode comparar duas refs quaisquer com git diff. por exemplo
 
