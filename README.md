@@ -296,3 +296,8 @@ $ git reset --hard HEAD~
 # Referências
 
 Você encontra mais dicas de git no meu [repo do github](https://github.com/ninrod/tricks/blob/master/shell/git.md).
+
+Licença
+---------
+
+[GNU Free Documentation License](http://www.gnu.org/copyleft/fdl.html)
