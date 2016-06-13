@@ -257,7 +257,7 @@ $ git checkout feature
 * suponha que você queira ainda setar o `origin/feature` para ser o tracking branch do `feature`
 
 ```sh
-# o -u manda o git setar o origin/feature que será criado nesse comando para ser o tracking branch de feature
+# o -u manda o git setar o origin/feature, que será criado nesse comando, para ser o tracking branch de feature
 $ git push -u origin feature
 ```
 
