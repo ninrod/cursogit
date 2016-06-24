@@ -2,7 +2,7 @@
 
 * onde eu apresento de forma escrita os comandos demonstrados no curso de git para fins de estudo pós-curso.
 
-# Ideias gerais do git
+# Ideias centrais do git
 
 ## Todo repo git é um DAG (direct acyclic graph)
 
@@ -22,7 +22,6 @@
 * uma referência é apenas um nome ligando um commit `SHA`.
 * São referências no git: o `HEAD`, qualquer `branch`, e qualquer `tag`.
 
-
 ## A `tag`
 
 * Uma `tag` é uma referência. Logo, é apenas um ponteiro para um commit.
@@ -36,7 +35,6 @@
 * O git commit faz com que o commit atual, apontado pelo branch atual, ganhe um filho, e faz o branch atual apontar para esse filho.
 * quando você inicia um repo git, o git cria um branch com o nome padrão de `master`. 
 * O `master` é só isso, um nome padrão para o primeiro branch criado. Poderia ser outro nome. Você pode mudar o nome para o nome que você quiser.
-
 
 ## O `HEAD`
 
